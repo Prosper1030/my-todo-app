@@ -1,6 +1,12 @@
 import function
 import FreeSimpleGUI as sg
 import time
+import os
+
+
+if not os.path.exists("todo.txt"):
+   with open("todo.txt", "w") as file:
+       pass
 
 sg.theme("black")
 clock = sg.Text("", key="clock")
@@ -26,7 +32,6 @@ while True:
     if event == sg.WIN_CLOSED or event == "Exit":   # 檢查窗口關閉事件
         break
     window["clock"].update(value=now)
-    print(event, value)
     match event:
         case "Add":
             todos = function.get_todo()
