@@ -1,6 +1,0 @@
-create
-hello
-press
-yuka
-fumi
-prosper
